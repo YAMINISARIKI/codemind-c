@@ -3,29 +3,28 @@ int main()
 {
     int a,b,c,next,n;
     scanf("%d",&n);
-    if((n==0)||(n==1))
+    if((n==0) || (n==1))
     {
-        printf("%d is a Fibonicca term",n);
+        printf("%d is fibonacci term",n);
     }
     else
     {
         a=0;
         b=1;
         c=a+b;
-    while(c<n)
-    {
-      a=b;
-      b=c;
-      c=a+b;
+        while(c<n)
+        {
+            a=b;
+            b=c;
+            c=a+b;
+        }
+        if(c==n)
+        {
+            printf("True");
+        }
+        else
+        {
+            printf("False");
+        }
     }
-    if(c==n)
-    {
-        printf("True");
-    }
-    else
-    {
-        printf("False");
-    }
-    }
-    return 0;
 }
