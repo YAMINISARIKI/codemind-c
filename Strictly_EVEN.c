@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int a[20],i,n;
+    int n;
     scanf("%d",&n);
+    int a[n],i;
     for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
@@ -19,5 +20,4 @@ int main()
         }
     }
     printf("True");
-    return 0;
 }
