@@ -3,16 +3,13 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int a[n],i;
-    float avg,sum=0.0;
-    for(i=0;i<n;i++)
+    int a[n],sum=0;
+    for(int i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
+        sum+=a[i];
     }
-    for(i=0;i<n;i++)
-    {
-        sum=sum+a[i];
-    }
-    avg=sum/n;
+    float avg;
+    avg=sum*(1.0)/n;
     printf("%.2f",avg);
 }
