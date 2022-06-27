@@ -3,14 +3,15 @@ int main()
 {
     int n;
     scanf("%d",&n);
-    int arr[n],i,index=0;
-    for(i=0;i<n;i++)
+    int a[n],i;
+    for (i=0; i<n; i++)
     {
-        scanf("%d",&arr[i]);
+        scanf("%d",&a[i]);
     }
-    for(i=0;i<n;i++)
+    int index=0;
+    for (i=0; i<n; i++)
     {
-        if(arr[i]%2==0)
+        if (a[i]%2==0)
         {
             index=i;
         }
