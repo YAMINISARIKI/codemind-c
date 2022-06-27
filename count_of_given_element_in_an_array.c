@@ -8,13 +8,14 @@ int main()
     {
         scanf("%d",&a[i]);
     }
-    int c=0,x;
-    scanf("%d",&x);
-    for(i=0;i<n;i++)
+    int m;
+    scanf("%d",&m);
+    int c=0;
+    for(int i=0;i<n;i++)
     {
-        if(a[i]==x)
+        if(a[i]==m)
         {
-            c+=1;
+            c++;
         }
     }
     printf("%d",c);
