@@ -1,27 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,s=0,i;
     scanf("%d",&n);
-    int a[n];
-    for(int i=0;i<n;i++)
+    int a[100];
+    for(i=0;i<n;i++)
     {
         scanf("%d",&a[i]);
     }
-    int c=0;
-    for(int i=0;i<n-1;i++)
+    for(i=0;i<n;i++)
     {
         if(a[i]>a[i+1])
         {
-            c=1;
-        }
-        else
-        {
-            c=0;
-            break;
+            
+            s=s+1;
         }
     }
-    if(c==1)
+    if(s!=n-1)
     {
         printf("yes");
     }
