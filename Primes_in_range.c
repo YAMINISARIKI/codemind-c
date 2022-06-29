@@ -2,7 +2,7 @@
 #include<math.h>
 int main()
 {
-  int i,n,flag,c;
+  int i,n,c1,c;
   int l,r;
   scanf("%d",&l);
   scanf("%d",&r);
@@ -13,16 +13,16 @@ int main()
       {
           continue;
       }
-      flag=0;
+      c1=0;
       for(i=2;i<=sqrt(n);++i)
       {
           if(n%i==0)
           {
-              flag=1;
+              c1=1;
               break;
           }
       }
-      if(flag==0)
+      if(c1==0)
       {
           ++c;
       }
