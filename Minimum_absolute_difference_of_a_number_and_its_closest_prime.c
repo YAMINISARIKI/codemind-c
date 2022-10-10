@@ -6,24 +6,24 @@ int main()
     scanf("%d",&n);
     for(i=n;i>=0;i--)
     {
-        count=0;
-        for(j=1;j<=i;j++)
-        {
-            if(i%j==0)
+            count=0;
+            for(j=1;j<=i;j++)
             {
-                count++;
+                if(i%j==0)
+                {
+                    count++;
+                }
             }
-        }
-        if(count==2)
-        {
-            x=i;
-            s=1;
-            break;
-        }
-        else
-        {
-            continue;
-        }
+            if(count==2)
+            {
+                x=i;
+                s=1;
+                break;
+            }
+            else
+            {
+                continue;
+            }
     }
     k=n;
     while(k>0)
@@ -49,12 +49,15 @@ int main()
     }
     f=abs(n-x);
     r=abs(n-y);
-    if(f<r || f==r)
+    if(f<r)
     {
-        printf("%d",abs(x-n));
+        printf("%d
+",f);
     }
     else
     {
-        printf("%d",abs(y-n));
+        printf("%d
+",r);
     }
+
 }
