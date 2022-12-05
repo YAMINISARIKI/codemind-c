@@ -1,10 +1,9 @@
 #include<stdio.h>
-#include<math.h>
 int main()
 {
     int n;
     scanf("%d",&n);
-    int a[100][100],b[100][100],c[100][100],k,i,j,l,sum=0;
+    int a[n][n],b[n][n],i,j,c[n][n],d;
     for(i=0;i<n;i++)
     {
         for(j=0;j<n;j++)
@@ -12,27 +11,36 @@ int main()
             scanf("%d",&a[i][j]);
         }
     }
-    for(k=0;k<n;k++)
+    for(i=0;i<n;i++)
     {
-        for(l=0;l<n;l++)
+        for(j=0;j<n;j++)
         {
-            scanf("%d",&b[k][l]);
-        }
-    }
-    for(i=0,k=0;i<n,k<n;i++,k++)
-    {
-        for(j=0,l=0;j<n,l<n;j++,l++)
-        {
-            c[i][j]+=abs(a[i][j]-b[k][l]);
+            scanf("%d",&b[i][j]);
         }
     }
     for(i=0;i<n;i++)
     {
-        for(j=0;j<n-1;j++)
+        for(j=0;j<n;j++)
         {
-            printf("%d ",c[i][j]);
+            d=a[i][j]-b[i][j];
+            if(d<0)
+            {
+                d*=-1;
+            }
+            c[i][j]=d;
         }
-        printf("%d
-",c[i][j]);
+    }
+    for(i=0;i<n;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            printf("%d",c[i][j]);
+            if(j<n-1)
+            {
+                printf(" ");
+            }
+        }
+        printf("
+");
     }
 }
